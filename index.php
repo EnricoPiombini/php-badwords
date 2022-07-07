@@ -20,11 +20,15 @@ dopo aver sostituito con tre asterischi (***) tutte le occorrenze della parola d
     <?php
     $par = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque numquam iure necessitatibus omnis. 
             Voluptates, eos assumenda non similique maxime mollitia vitae labore atque est recusandae adipisci quidem. Quod, blanditiis";
+    $badword = $_GET["badword"];
+    $newText = str_replace($badword, '***', $par);
     ?>
 
     <p> <strong>Testo paragrafo:</strong><?php echo $par ?> </p>
     <p><strong>Lunghezza Paragrafo:</strong></p><?php echo strlen($par) ?> caratteri;
 
+    <p><strong>Testo nuovo paragrafo</strong><?php echo $newText  ?> </p>;
+    <p> <strong>Lunghezza nuovo paragrafo</strong> <?php echo strlen($newText) ?></p>
 </body>
 
 </html>
